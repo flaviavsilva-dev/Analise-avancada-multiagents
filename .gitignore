@@ -1,0 +1,28 @@
+# Ambientes, caches e arquivos temporários
+.venv/
+**/.venv/
+__pycache__/
+*.py[cod]
+*.log
+.env
+.env.*
+!.env.example
+
+# Dados e artefatos pesados ou gerados
+*.csv
+*.json
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.pdf
+*.xlsx
+*.zip
+
+# Implementação do dashboard não faz parte desta publicação documental
+graficos.py
+projeto-dashboard/README.md
+projeto-dashboard/scripts/
+projeto-dashboard/site/
+projeto-dashboard/tests/
