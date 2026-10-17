@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Painel interativo de vendas da papelaria, com filtros por cidade e categoria.">
+    <title>Vendas da papelaria | Painel</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header class="topo">
+      <div class="container topo-conteudo">
+        <div>
+          <p class="sobre-titulo">PAINEL DE VENDAS</p>
+          <h1>Visão geral da papelaria</h1>
+          <p class="subtitulo">Acompanhe o valor vendido, as vendas e os resultados por categoria e cidade.</p>
+        </div>
+        <span class="periodo" id="periodo">Carregando período…</span>
+      </div>
+    </header>
+
+    <main id="conteudo" class="container">
+      <figure class="hero-visual">
+        <img
+          src="./images/papelaria-hero.svg"
+          alt="Caderno aberto com formas coloridas abstratas no centro, cercado por lápis de cor, canetas, fitas washi, clipes, régua e papéis coloridos."
+          width="1200"
+          height="540"
+        >
+      </figure>
+
+      <section class="filtros" aria-labelledby="titulo-filtros">
+        <div class="secao-cabecalho">
+          <div>
+            <p class="sobre-titulo">EXPLORE OS DADOS</p>
+            <h2 id="titulo-filtros">Filtros</h2>
+          </div>
+          <button type="button" class="botao-secundario" id="limpar-filtros">Limpar filtros</button>
+        </div>
+        <div class="filtros-campos">
+          <label for="filtro-cidade">Cidade
+            <select id="filtro-cidade">
+              <option value="">Todas as cidades</option>
+            </select>
+          </label>
+          <label for="filtro-categoria">Categoria
+            <select id="filtro-categoria">
+              <option value="">Todas as categorias</option>
+            </select>
+          </label>
+        </div>
+        <p class="ajuda-filtros">Os filtros atualizam juntos os indicadores, os gráficos e a tabela.</p>
+      </section>
+
+      <section aria-labelledby="titulo-indicadores" class="bloco">
+        <div class="secao-cabecalho">
+          <div>
+            <p class="sobre-titulo">RESUMO DO RECORTE</p>
+            <h2 id="titulo-indicadores">Indicadores</h2>
+          </div>
+        </div>
+        <div class="indicadores">
+          <article class="cartao-indicador">
+            <h3>Valor total vendido</h3>
+            <p class="valor-indicador" id="indicador-total">—</p>
+            <p class="nota-indicador">Soma de quantidade × preço unitário</p>
+          </article>
+          <article class="cartao-indicador">
+            <h3>Quantidade de vendas</h3>
+            <p class="valor-indicador" id="indicador-contagem">—</p>
+            <p class="nota-indicador">Um registro por venda identificada</p>
+          </article>
+          <article class="cartao-indicador">
+            <h3>Ticket médio</h3>
+            <p class="valor-indicador" id="indicador-ticket">—</p>
+            <p class="nota-indicador">Valor vendido ÷ número de vendas</p>
+          </article>
+        </div>
+        <p class="aviso">Valor vendido não representa lucro: custos e despesas não estão disponíveis nesta base.</p>
+      </section>
+
+      <section aria-labelledby="titulo-graficos" class="bloco">
+        <div class="secao-cabecalho">
+          <div>
+            <p class="sobre-titulo">COMPARAÇÃO</p>
+            <h2 id="titulo-graficos">Onde estão as vendas?</h2>
+          </div>
+        </div>
+        <div class="graficos">
+          <article class="cartao-grafico">
+            <h3>Valor vendido por categoria</h3>
+            <div id="grafico-categoria" class="area-grafico"></div>
+          </article>
+          <article class="cartao-grafico">
+            <h3>Valor vendido por cidade</h3>
+            <div id="grafico-cidade" class="area-grafico"></div>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="titulo-tabela" class="bloco tabela-secao">
+        <div class="secao-cabecalho">
+          <div>
+            <p class="sobre-titulo">DETALHAMENTO</p>
+            <h2 id="titulo-tabela">Vendas</h2>
+          </div>
+          <p id="contagem-tabela" class="contagem-tabela" aria-live="polite"></p>
+        </div>
+        <p id="estado-vazio" class="estado-vazio" role="status" hidden>Nenhuma venda corresponde aos filtros selecionados. Altere os filtros ou use “Limpar filtros”.</p>
+        <div class="tabela-rolagem" id="tabela-rolagem">
+          <table>
+            <caption>Registros de vendas conforme os filtros selecionados</caption>
+            <thead>
+              <tr>
+                <th scope="col">Data</th>
+                <th scope="col">ID da venda</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Produto</th>
+                <th scope="col" class="numero">Unidades</th>
+                <th scope="col" class="numero">Preço unitário</th>
+                <th scope="col">Pagamento</th>
+                <th scope="col" class="numero">Valor vendido</th>
+              </tr>
+            </thead>
+            <tbody id="corpo-tabela"></tbody>
+          </table>
+        </div>
+      </section>
+      <footer class="rodape">Fonte: papelaria_limpa.csv. As vendas são contadas por registro/ID; unidades representam a soma da coluna quantidade.</footer>
+    </main>
+  </body>
+</html>

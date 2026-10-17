@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Uma mesa cheia de papelaria colorida</title>
+  <desc id="descricao">Um caderno aberto com formas abstratas ocupa o centro, cercado por lápis, canetas, fitas washi, clipes, régua e papéis coloridos.</desc>
+  <defs>
+    <linearGradient id="fundo" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff2f7"/>
+      <stop offset="1" stop-color="#f8dce8"/>
+    </linearGradient>
+    <linearGradient id="capa" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e987a5"/>
+      <stop offset="1" stop-color="#bd4c77"/>
+    </linearGradient>
+    <linearGradient id="lapis-coral" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#ff9675"/>
+      <stop offset="1" stop-color="#f05d6c"/>
+    </linearGradient>
+    <linearGradient id="lapis-azul" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#73d4d0"/>
+      <stop offset="1" stop-color="#369bb4"/>
+    </linearGradient>
+    <linearGradient id="lapis-amarelo" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#ffd969"/>
+      <stop offset="1" stop-color="#f5a842"/>
+    </linearGradient>
+    <linearGradient id="caneta" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#9775d8"/>
+      <stop offset="1" stop-color="#6252ad"/>
+    </linearGradient>
+    <pattern id="puntitos" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.5" fill="#d89bb3" opacity=".35"/>
+    </pattern>
+    <pattern id="rayas-washi" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="12" height="12" fill="#f6bd52"/>
+      <rect width="4" height="12" fill="#fff0bc" opacity=".9"/>
+    </pattern>
+    <filter id="sombra" x="-20%" y="-20%" width="140%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9"/>
+      <feOffset dy="9"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".16"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="540" rx="22" fill="url(#fundo)"/>
+  <rect width="1200" height="540" rx="22" fill="url(#puntitos)"/>
+  <path d="M0 420c130-55 175-36 278 7s183 72 306 29 178-90 303-54 197 72 313 19v119H0z" fill="#f2cbd9" opacity=".55"/>
+  <circle cx="590" cy="267" r="210" fill="#edbad0" opacity=".26"/>
+
+  <!-- Recortes e manchas de papel nos cantos -->
+  <path d="M0 0h210l-28 96H0z" fill="#e8a6c9" opacity=".55"/>
+  <path d="M1026 0h174v128l-86-18z" fill="#8fd4cf" opacity=".6"/>
+  <path d="M0 470l166-37 51 107H0z" fill="#f3c84f" opacity=".7"/>
+  <path d="M1029 438l171-25v127H984z" fill="#9b85d9" opacity=".48"/>
+
+  <!-- Lápis de cor no alto à esquerda -->
+  <g transform="translate(45 54) rotate(-24 160 25)" stroke-linejoin="round">
+    <path d="M8 10 0 22l14 10 18-9V5z" fill="#e8bb83"/>
+    <rect x="22" y="5" width="250" height="27" rx="7" fill="url(#lapis-coral)"/>
+    <path d="M270 5h20l26 13.5L290 32h-20z" fill="#f0c58b"/>
+    <path d="m316 18.5-26 13.5 7-13.5L290 5z" fill="#edc891"/>
+    <path d="m316 18.5-25-1L290 5z" fill="#4a3f42"/>
+    <path d="M47 7v23M54 7v23" stroke="#fff3dc" stroke-width="3" opacity=".75"/>
+    <rect x="8" y="10" width="18" height="17" rx="3" fill="#f3d7aa"/>
+  </g>
+  <g transform="translate(93 112) rotate(-14 135 12)" stroke-linejoin="round">
+    <path d="m0 12 22-12h248l24 12-24 12H22z" fill="url(#lapis-azul)"/>
+    <path d="m0 12 22-5v10z" fill="#e9c38f"/>
+    <path d="m0 12 22-2v4z" fill="#3c3940"/>
+    <path d="M62 2v20M69 2v20" stroke="#e8ffff" stroke-width="3" opacity=".8"/>
+  </g>
+  <g transform="translate(31 176) rotate(-7 120 12)" stroke-linejoin="round">
+    <path d="m0 12 22-12h210l25 12-25 12H22z" fill="url(#lapis-amarelo)"/>
+    <path d="m0 12 22-5v10z" fill="#e7bd87"/>
+    <path d="m0 12 22-2v4z" fill="#443e44"/>
+    <path d="M58 2v20M65 2v20" stroke="#fff8d4" stroke-width="3" opacity=".85"/>
+  </g>
+
+  <!-- Canetas coloridas à direita -->
+  <g transform="translate(1055 142) rotate(19)" stroke-linejoin="round">
+    <rect x="0" y="0" width="28" height="195" rx="13" fill="url(#caneta)"/>
+    <path d="M2 28h24M2 38h24" stroke="#e6dcff" stroke-width="3"/>
+    <path d="M7 0q7-14 14 0" fill="none" stroke="#53458f" stroke-width="5"/>
+    <path d="M4 183h20l-10 24z" fill="#4b4770"/>
+  </g>
+  <g transform="translate(1110 182) rotate(24)" stroke-linejoin="round">
+    <rect x="0" y="0" width="23" height="177" rx="11" fill="#32a9a0"/>
+    <path d="M2 25h19M2 34h19" stroke="#baf2e4" stroke-width="3"/>
+    <path d="M5 165h13l-6.5 20z" fill="#317c7b"/>
+  </g>
+
+  <!-- Washi tape: rolinhos e tiras estampadas -->
+  <g transform="translate(920 55) rotate(12)">
+    <circle cx="44" cy="42" r="39" fill="#ed7d85"/>
+    <circle cx="44" cy="42" r="17" fill="#fff1da"/>
+    <circle cx="44" cy="42" r="9" fill="#efb27a"/>
+    <path d="M72 19c18 4 27 17 25 32" fill="none" stroke="#ffd3cb" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(1030 62) rotate(-12)">
+    <circle cx="36" cy="35" r="31" fill="#69bdb2"/>
+    <circle cx="36" cy="35" r="13" fill="#fff1da"/>
+    <circle cx="36" cy="35" r="7" fill="#d9a678"/>
+  </g>
+  <path d="M894 112l116 24-8 24-116-24z" fill="url(#rayas-washi)"/>
+  <path d="M855 448l160-34 9 25-160 34z" fill="#e886a0" opacity=".95"/>
+  <path d="M870 448l13-3m9-2 13-3m9-2 13-3m9-2 13-3m9-2 13-3m9-2 13-3m9-2 13-3" stroke="#fff3df" stroke-width="4"/>
+
+  <!-- Régua e clipe no canto inferior esquerdo -->
+  <g transform="translate(70 380) rotate(-11)">
+    <rect x="0" y="0" width="270" height="45" rx="8" fill="#8dc9b2" stroke="#478d83" stroke-width="3" opacity=".95"/>
+    <path d="M20 5v16m19-16v10m19-10v16m19-16v10m19-10v16m19-16v10m19-10v16m19-16v10m19-10v16m19-16v10m19-10v16m19-16v10" stroke="#376c69" stroke-width="3" stroke-linecap="round"/>
+    <path d="M22 32h223" stroke="#d8f1da" stroke-width="2" opacity=".8"/>
+  </g>
+  <g transform="translate(290 74) rotate(17)" fill="none" stroke="#e47a79" stroke-width="7">
+    <path d="M0 23V13C0-2 24-2 24 13v67c0 18-29 18-29 0V25c0-10 15-10 15 0v49" stroke-linecap="round"/>
+  </g>
+
+  <!-- Papéis coloridos empilhados à direita -->
+  <g transform="translate(928 345) rotate(8)" stroke-linejoin="round">
+    <path d="M16 19 179 0l31 115-165 22z" fill="#91c9d6" stroke="#4d9eb0" stroke-width="3"/>
+    <path d="M0 34 166 12l35 113-167 24z" fill="#f4c85e" stroke="#d9a83e" stroke-width="3"/>
+    <path d="M25 51 186 30l28 111-164 23z" fill="#f18c9c" stroke="#d36680" stroke-width="3"/>
+    <path d="m53 78 76-10m-68 28 91-12m-81 29 54-7" stroke="#fff5e7" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+  </g>
+  <g transform="translate(890 300) rotate(-16)" fill="none" stroke="#4d91a3" stroke-width="6">
+    <path d="M0 21V12C0-1 21-1 21 12v61c0 16-26 16-26 0V24c0-9 14-9 14 0v43" stroke-linecap="round"/>
+  </g>
+
+  <!-- Caderno aberto: foco central, com arte abstrata sem dados ou rótulos -->
+  <g filter="url(#sombra)">
+    <path d="M343 143q10-20 31-24l198 17v305L374 423q-25-2-31-25z" fill="url(#capa)"/>
+    <path d="M857 143q-10-20-31-24l-198 17v305l198-18q25-2 31-25z" fill="url(#capa)"/>
+    <path d="M359 135q108-29 220 2v295q-115-30-220-2z" fill="#fffafd" stroke="#e8d0db" stroke-width="3"/>
+    <path d="M841 135q-108-29-220 2v295q115-30 220-2z" fill="#fffafd" stroke="#e8d0db" stroke-width="3"/>
+    <path d="M600 139v292" stroke="#d8bdca" stroke-width="5"/>
+    <path d="M607 141v288" stroke="#f1e2e9" stroke-width="2"/>
+    <path d="M374 180q95-21 190 3m-190 24q95-21 190 3m-190 24q95-21 190 3m-190 24q95-21 190 3m-190 24q95-21 190 3m-190 24q95-21 190 3m-190 24q95-21 190 3" fill="none" stroke="#dce7df" stroke-width="3" stroke-linecap="round"/>
+    <path d="M626 180q95-21 190 3m-190 24q95-21 190 3m-190 24q95-21 190 3m-190 24q95-21 190 3m-190 24q95-21 190 3m-190 24q95-21 190 3m-190 24q95-21 190 3" fill="none" stroke="#dce7df" stroke-width="3" stroke-linecap="round"/>
+    <path d="M598 168v246" stroke="#efb8b1" stroke-width="2" opacity=".7"/>
+
+    <!-- arte de formas: laços, pétalas e sol; não representa métricas -->
+    <path d="M408 259c22-52 57-49 76-13 20-44 59-39 65 8 6 42-43 65-83 69-45 4-76-23-58-64z" fill="#f6b94f" opacity=".95"/>
+    <path d="M443 273c15-19 28 4 40 21 11-23 31-34 46-17 13 16-7 37-25 49-23 15-57 10-68-9-8-14-3-31 7-44z" fill="#ec7185"/>
+    <circle cx="481" cy="285" r="12" fill="#fff3d8"/>
+    <path d="M650 312a62 62 0 1 1 114 34c-30 32-84 30-114-3" fill="#77c8b6"/>
+    <path d="M704 250a62 62 0 0 1 60 62h-60z" fill="#f28b72"/>
+    <path d="M651 346q28-25 53 0t53 0" fill="none" stroke="#6b5eaa" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="681" cy="281" r="7" fill="#f4ca5c"/>
+    <circle cx="754" cy="285" r="6" fill="#ed7185"/>
+    <path d="M690 367l8 15 17 2-12 11 3 17-16-8-15 8 3-17-12-11 17-2z" fill="#f4bd50"/>
+    <path d="M455 367c19-12 36-12 52 0" fill="none" stroke="#6b9c91" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="525" cy="371" r="7" fill="#6b9c91"/>
+
+    <!-- anéis e marcador -->
+    <g fill="#f7e7d2" stroke="#c8a992" stroke-width="2">
+      <ellipse cx="600" cy="174" rx="8" ry="13"/><ellipse cx="600" cy="207" rx="8" ry="13"/>
+      <ellipse cx="600" cy="240" rx="8" ry="13"/><ellipse cx="600" cy="273" rx="8" ry="13"/>
+      <ellipse cx="600" cy="306" rx="8" ry="13"/><ellipse cx="600" cy="339" rx="8" ry="13"/>
+      <ellipse cx="600" cy="372" rx="8" ry="13"/><ellipse cx="600" cy="405" rx="8" ry="13"/>
+    </g>
+    <path d="M626 132h54l-10 26h-34z" fill="#8ac9bc" opacity=".9"/>
+    <path d="M644 132v19" stroke="#fff6dd" stroke-width="3"/>
+  </g>
+
+  <!-- Confetes finais -->
+  <g fill="#e77780">
+    <circle cx="355" cy="91" r="7"/><circle cx="850" cy="83" r="6"/><circle cx="809" cy="465" r="7"/>
+  </g>
+  <g fill="#5daea8">
+    <path d="m315 302 10 5-8 9-10-5z"/><path d="m860 235 11 4-7 11-10-4z"/><path d="m374 467 12 3-6 11-11-4z"/>
+  </g>
+  <g fill="#e4a741">
+    <path d="m858 98 4 11 11 4-11 4-4 11-4-11-11-4 11-4z"/>
+    <path d="m290 390 3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+  </g>
+</svg>

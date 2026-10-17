@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: papelaria-dashboard
+    runtime: static
+    branch: main
+    buildCommand: "echo 'Static site ready'"
+    staticPublishPath: projeto-dashboard/site
+    autoDeployTrigger: commit
